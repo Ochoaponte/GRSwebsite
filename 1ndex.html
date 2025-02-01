@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Global Red Solutions</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        /* Estilos generales */
+        body {
+            font-family: 'Poppins', sans-serif; /* Fuente moderna */
+            margin: 0;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f8f9fa; /* Fondo sutil */
+        }
+
+        /* Encabezado */
+        header {
+            background-color: #2c3e50;
+            color: white;
+            padding: 2rem 0;
+            text-align: center;
+        }
+
+        #titulo-header {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+            animation: none; /* Eliminamos la animación de "escritura" (opcional) */
+        }
+
+        header p {
+            font-size: 1.2rem;
+            font-weight: 300;
+        }
+
+        /* Navegación */
+        nav {
+            background-color: #34495e;
+            padding: 1rem 0;
+            text-align: center;
+        }
+
+        nav a {
+            color: white;
+            margin: 0 1.5rem;
+            text-decoration: none;
+            font-size: 1.1rem;
+            font-weight: 500;
+            transition: color 0.3s ease; /* Transición suave para el color */
+        }
+
+        nav a:hover {
+            color: #f0ad4e; /* Color de énfasis al pasar el mouse */
+        }
+
+        /* Contenido principal */
+        .container {
+            width: 85%;
+            margin: 2rem auto;
+            padding: 2rem;
+            background-color: white;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+            border-radius: 8px;
+        }
+
+        .card {
+            margin-bottom: 2rem;
+            padding: 1.5rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            background-color: #fff;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-5px); /* Ligero movimiento hacia arriba al pasar el mouse */
+            box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+        }
+
+        .card h2 {
+            color: #2c3e50;
+            margin-bottom: 1rem;
+        }
+
+        /* Pie de página */
+        footer {
+            background-color: #2c3e50;
+            color: white;
+            text-align: center;
+            padding: 1rem 0;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+
+        /* Formulario de contacto */
+        form label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 500;
+        }
+
+        form input,
+        form textarea {
+            width: 100%;
+            padding: 0.8rem;
+            margin-bottom: 1rem;
+            border: 1px solid #ced4da;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+
+        form input[type="submit"] {
+            background-color: #007bff;
+            color: white;
+            padding: 1rem 1.5rem;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        form input[type="submit"]:hover {
+            background-color: #0056b3;
+        }
+
+        /* ... (Estilos CSS sin cambios) */
+        <style>
+    </style>
+    <script>
+        function mostrarServicio(idServicio) {
+            const template = document.getElementById(idServicio);
+            const contenido = template.content.cloneNode(true);
+            document.getElementById('content').innerHTML = ''; // Limpiar el contenedor
+            document.getElementById('content').appendChild(contenido);
+        }
+        // ... (Función validarFormulario sin cambios)
+    </script>
+</head>
+
+<body>
+    <header>
+        <h1>Global Red Solutions</h1>
+        <p>Soluciones tecnológicas innovadoras para tu negocio</p>
+    </header>
+    <nav>
+        <a href="#" onclick="mostrarServicio('sobre')">Sobre Nosotros</a>
+        <a href="#" onclick="mostrarServicio('servicios')">Servicios</a>
+        <a href="#" onclick="mostrarServicio('contacto')">Contacto</a>
+    </nav>
+    <div class="container" id="content">
+        <div class="card">
+            <h2>Bienvenido</h2>
+            <p>Seleccione una opción del menú para obtener más información.</p>
+        </div>
+    </div>
+    <footer>
+        <p>&copy; 2024 Global Red Solutions. Todos los derechos reservados.</p>
+    </footer>
+
+    <template id="sobre">
+        <div class="card">
+            <h2>Sobre Nosotros</h2>
+            <p>En Global Red Solutions, ofrecemos soluciones tecnológicas avanzadas para mejorar la eficiencia y productividad de tu empresa. Contamos con un equipo de expertos en diversas áreas de la tecnología, comprometidos con brindar soluciones personalizadas que se adapten a las necesidades específicas de cada cliente. Nuestra misión es impulsar el crecimiento de nuestros clientes a través de la innovación y la excelencia en el servicio.</p>
+            <p>Nos enfocamos en construir relaciones a largo plazo con nuestros clientes, basadas en la confianza y la transparencia. Trabajamos en estrecha colaboración con ellos para entender sus desafíos y oportunidades, y así ofrecerles las mejores soluciones tecnológicas disponibles.</p>
+        </div>
+    </template>
+
+    <template id="servicios">
+        <div class="card">
+            <h2>Servicios</h2>
+            <ul>
+                <li><a href="#" onclick="mostrarServicio('desarrollo-web')"><b>Desarrollo Web:</b> Creamos sitios web a medida...</a></li>
+                <li><a href="#" onclick="mostrarServicio('aplicaciones-moviles')"><b>Aplicaciones Móviles:</b> Desarrollamos aplicaciones móviles nativas...</a></li>
+                <li><a href="#" onclick="mostrarServicio('consultoria-tecnologica')"><b>Consultoría Tecnológica:</b> Ofrecemos servicios de consultoría...</a></li>
+                <li><a href="#" onclick="mostrarServicio('desarrollo-software')"><b>Desarrollo de Software:</b> Desarrollamos software a medida...</a></li>
+                <li><a href="#" onclick="mostrarServicio('mantenimiento-soporte')"><b>Mantenimiento y Soporte:</b> Brindamos servicios de mantenimiento...</a></li>
+            </ul>
+        </div>
+
+        <template id="desarrollo-web">
+            <div class="card">
+                <h2>Desarrollo Web</h2>
+                <p>Ofrecemos servicios de desarrollo web a medida para empresas de todos los tamaños. Nuestro equipo de expertos en diseño y desarrollo web se enfoca en crear sitios web que sean visualmente atractivos, fáciles de usar y optimizados para el rendimiento.</p>
+                <p>Ya sea que necesites un sitio web sencillo o una plataforma web compleja, tenemos la experiencia y el conocimiento para ayudarte a alcanzar tus objetivos.</p>
+            </div>
+        </template>
+
+        <template id="aplicaciones-moviles">
+            <div class="card">
+                <h2>Aplicaciones Móviles</h2>
+                <p>Desarrollamos aplicaciones móviles nativas para iOS y Android, que te permitirán llegar a tus clientes de manera efectiva y ofrecerles una experiencia móvil excepcional.</p>
+                <p>Nuestro equipo de desarrolladores de aplicaciones móviles altamente capacitados utiliza las últimas tecnologías y herramientas para crear aplicaciones innovadoras y personalizadas que se adapten a tus necesidades específicas.</p>
+            </div>
+        </template>
+
+        <template id="consultoria-tecnologica">
+            <div class="card">
+                <h2>Consultoría Tecnológica</h2>
+                <p>Ofrecemos servicios de consultoría tecnológica para ayudarte a definir tu estrategia tecnológica, identificar oportunidades de mejora y optimizar tus procesos.</p>
+                <p>Nuestros consultores expertos trabajarán contigo para entender tus desafíos y objetivos de negocio, y te brindarán recomendaciones y soluciones personalizadas para impulsar tu crecimiento y éxito.</p>
+            </div>
+        </template>
+
+        <template id="desarrollo-software">
+            <div class="card">
+                <h2>Desarrollo de Software</h2>
+                <p>Desarrollamos software a medida para automatizar tareas, mejorar la eficiencia y resolver problemas específicos de tu negocio.</p>
+            <p>Nuestro equipo de desarrolladores de software altamente capacitados utiliza las últimas tecnologías y metodologías de desarrollo para crear soluciones de software innovadoras y personalizadas que se adapten a tus necesidades específicas.</p>
+            </div>
+        </template>
+
+        <template id="mantenimiento-soporte">
+            <div class="card">
+                <h2>Mantenimiento y Soporte</h2>
+                <p>Brindamos servicios de mantenimiento y soporte para garantizar el correcto funcionamiento de tus sistemas y aplicaciones.</p>
+            <p>Nuestro equipo de soporte técnico está disponible para ayudarte con cualquier problema o pregunta que puedas tener, y te brindará soluciones rápidas y eficientes para que puedas seguir operando sin interrupciones.</p>
+            </div>
+        </template>
+    </template>
+
+    <template id="contacto">
+        <div class="card">
+            <h2>Contacto</h2>
+            <p>Puedes contactarnos en <a href="mailto:info@globalredsolutions.com">info@globalredsolutions.com</a> o llamarnos al +52 (81) 1234 5678.</p>
+            <p>Visítanos en nuestras oficinas ubicadas en:</p>
+            <p>Calle Ejemplo #123, Colonia Centro, Monterrey, N.L., México.</p>
+            <p>También puedes completar el siguiente formulario y nos pondremos en contacto contigo a la brevedad:</p>
+            <form onsubmit="return validarFormulario()">
+                <label for="nombre">Nombre:</label><br>
+                <input type="text" id="nombre" name="nombre"><br>
+                <label for="email">Email:</label><br>
+                <input type="email" id="email" name="email"><br>
+                <label for="mensaje">Mensaje:</label><br>
+                <textarea id="mensaje" name="mensaje" rows="4" cols="50"></textarea><br><br>
+                <input type="submit" value="Enviar">
+            </form>
+        </div>
+    </template>
+</body>
+</html>
