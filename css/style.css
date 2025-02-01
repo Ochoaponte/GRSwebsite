@@ -1,0 +1,136 @@
+/* Estilos generales */
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f8f9fa; /* Gris claro de fondo */
+}
+
+/* Encabezado */
+header {
+    background-color: #2c3e50; /* Azul oscuro */
+    color: white;
+    padding: 2rem 0;
+    text-align: center;
+}
+
+#titulo-header {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+}
+
+header p {
+    font-size: 1.2rem;
+    font-weight: 300;
+}
+
+/* Navegación */
+nav {
+    background-color: #34495e; /* Azul un poco más claro */
+    padding: 1rem 0;
+    text-align: center;
+}
+
+nav a {
+    color: white;
+    margin: 0 1.5rem;
+    text-decoration: none;
+    font-size: 1.1rem;
+    font-weight: 500;
+    transition: color 0.3s ease; /* Transición suave al pasar el ratón */
+}
+
+nav a:hover {
+    color: #f0ad4e; /* Amarillo al pasar el ratón */
+}
+
+/* Contenido principal */
+.container {
+    width: 85%;
+    margin: 2rem auto;
+    padding: 2rem;
+    background-color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    border-radius: 8px;
+}
+
+.card {
+    margin-bottom: 2rem;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra muy suave */
+    background-color: #fff;
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transición suave */
+}
+
+.card:hover {
+    transform: translateY(-5px); /* Ligero movimiento hacia arriba */
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15); /* Sombra un poco más marcada */
+}
+
+.card h2 {
+    color: #2c3e50; /* Azul oscuro para los títulos */
+    margin-bottom: 1rem;
+}
+
+/* Pie de página */
+footer {
+    background-color: #2c3e50; /* Azul oscuro */
+    color: white;
+    text-align: center;
+    padding: 1rem 0;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+/* Formulario de contacto */
+form label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+}
+
+form input,
+form textarea {
+    width: 100%;
+    padding: 0.8rem;
+    margin-bottom: 1rem;
+    border: 1px solid #ced4da; /* Borde gris claro */
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+form input[type="submit"] {
+    background-color: #007bff; /* Azul para el botón */
+    color: white;
+    padding: 1rem 1.5rem;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease; /* Transición suave */
+}
+
+form input[type="submit"]:hover {
+    background-color: #0056b3; /* Azul más oscuro al pasar el ratón */
+}
+
+/* Estilos para la lista de servicios */
+#servicios ul {
+    list-style: none; /* Elimina los puntos de la lista */
+    padding: 0;
+}
+
+#servicios li {
+    margin-bottom: 1rem;
+}
+
+#servicios a {
+    color: #007bff; /* Azul para los enlaces */
+    text-decoration: none;
+}
+
+#servicios a:hover {
+    text-decoration: underline; /* Subrayado al pasar el ratón */
+}
